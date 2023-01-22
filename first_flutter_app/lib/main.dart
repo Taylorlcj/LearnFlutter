@@ -7,14 +7,13 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Taylor's app",
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: myHomePage(),
@@ -22,14 +21,10 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class myHomePage extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Hello World!")),
-        body: Text("moo"));
+        appBar: AppBar(title: Text("Hello World!")), body: Text("moo"));
   }
 }
