@@ -25,13 +25,16 @@ class myHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Hello World!")), body: Text("moo"));
+        appBar: AppBar(title: Text("Mamma Mia")),
+        body: Row(
+          children: <Widget>[TestWidget(), TestWidget(), TestWidget()],
+        ));
   }
 }
 
 class TestWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text("Hello world");
+    return Text("Oink ");
   }
 }
