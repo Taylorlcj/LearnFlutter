@@ -28,3 +28,10 @@ class myHomePage extends StatelessWidget {
         appBar: AppBar(title: Text("Hello World!")), body: Text("moo"));
   }
 }
+
+class TestWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text("Hello world");
+  }
+}
