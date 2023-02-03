@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 import 'package:flutter/material.dart';
 import 'package:flutter_1_hour/home_page.dart';
+import 'package:flutter_1_hour/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,13 +29,14 @@ class RootPage extends StatefulWidget {
 
 class RootPageState extends State<RootPage> {
   int currentPage = 0;
+  List<Widget> pages = const [HomePage(), ProfilePage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Hello World!"),
       ),
-      body: const HomePage(),
+      body: pages[currentPage],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint("Hello There!");
