@@ -15,10 +15,13 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
         title: const Text("Learn FLuter"),
         automaticallyImplyLeading: false,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
           icon: const Icon(Icons.arrow_back_ios),
         ),
       ),
+      body: Column(children: [Image.asset('images/macaw.jpeg')]),
     );
   }
 }
