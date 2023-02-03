@@ -1,5 +1,6 @@
 // ignore_for_file: camel_case_types
 import 'package:flutter/material.dart';
+import 'package:flutter_1_hour/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,7 @@ class RootPageState extends State<RootPage> {
       appBar: AppBar(
         title: const Text("Hello World!"),
       ),
+      body: const HomePage(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint("Hello There!");
