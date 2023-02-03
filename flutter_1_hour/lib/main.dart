@@ -1,3 +1,4 @@
+// ignore_for_file: camel_case_types
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,47 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, //removes the debug banner
+      theme: ThemeData(primarySwatch: Colors.cyan), //color of the app bar
+      home: const RootPage(),
+    );
+  }
+}
+
+class RootPage extends StatefulWidget {
+  const RootPage({super.key});
+
+  @override
+  State<RootPage> createState() => RootPageState();
+}
+
+class RootPageState extends State<RootPage> {
+  int currentPage = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Hello World!"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          debugPrint("Hello There!");
+        },
+        child: const Icon(Icons.add),
+      ),
+      bottomNavigationBar: NavigationBar(
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+        ],
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentPage = index;
+          });
+        },
+        selectedIndex: currentPage,
+      ),
+    );
   }
 }
