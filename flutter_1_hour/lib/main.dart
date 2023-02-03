@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //removes the debug banner
-      theme: ThemeData(primarySwatch: Colors.cyan), //color of the app bar
+      theme: ThemeData(primarySwatch: Colors.cyan), //color of the app
       home: const RootPage(),
     );
   }
