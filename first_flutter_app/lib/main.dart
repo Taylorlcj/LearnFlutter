@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: myHomePage(),
+      home: const myHomePage(),
     );
   }
 }
@@ -37,8 +37,10 @@ class myHomePage extends StatelessWidget {
 }
 
 class TestWidget extends StatelessWidget {
+  const TestWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Text("Oink ");
+    return const Text("Oink ");
   }
 }

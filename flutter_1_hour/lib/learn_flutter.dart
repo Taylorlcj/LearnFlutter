@@ -74,9 +74,9 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
             onTap: () {
               debugPrint("This is the Row");
             },
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Icon(
                   Icons.local_fire_department,
                   color: Colors.orange,
